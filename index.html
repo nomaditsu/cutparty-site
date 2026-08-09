@@ -4,76 +4,115 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CutParty — Cut to the fun part of editing</title>
-  <meta name="description" content="CutParty turns a folder of clips into one cleaned, color-graded, silence-stripped video. Cut silences, reduce noise, normalize audio, color grade, and stitch, all on your Mac. No subscription." />
+  <meta name="description" content="CutParty turns a folder of clips into one cleaned, color-graded, silence-stripped video. Cut silences, reduce noise, normalize audio, color grade, and stitch — all on your Mac. No subscription, no account, nothing uploaded." />
   <meta property="og:title" content="CutParty for macOS" />
-  <meta property="og:description" content="Import your clips. CutParty cuts silences, cleans audio, normalizes loudness, color grades, and stitches them into a finished video. One click." />
+  <meta property="og:description" content="Import your clips. CutParty cuts silences, cleans audio, normalizes loudness, color grades, and stitches them into a finished video. One click, entirely on your Mac." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav">
-      <a class="brand" href="/">🎉 CutParty</a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="support.html">Support</a>
-      </div>
-    </nav>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="confetti" aria-hidden="true"></div>
+
+  <div class="topbar">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="/"><span class="party">🎉</span> CutParty</a>
+        <div class="nav-links">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+    </div>
   </div>
 
   <header class="hero">
-    <div class="confetti" aria-hidden="true">
-      <span style="left:8%;top:20%;background:#2783de;transform:rotate(20deg)"></span>
-      <span style="left:18%;top:60%;background:#e0a93b;transform:rotate(-15deg)"></span>
-      <span style="left:30%;top:12%;background:#46a171;transform:rotate(40deg)"></span>
-      <span style="left:70%;top:16%;background:#e56458;transform:rotate(-25deg)"></span>
-      <span style="left:84%;top:40%;background:#9d6bd6;transform:rotate(15deg)"></span>
-      <span style="left:90%;top:70%;background:#35b9b0;transform:rotate(-35deg)"></span>
-      <span style="left:60%;top:66%;background:#e97393;transform:rotate(30deg)"></span>
-      <span style="left:46%;top:78%;background:#e0a93b;transform:rotate(-10deg)"></span>
-    </div>
     <div class="wrap">
-      <h1>Cut to the fun<br />part of editing.</h1>
-      <p class="sub">Import your clips. CutParty cuts silences, reduces noise, normalizes loudness, color grades, and stitches them into a finished video. One click, all on your Mac.</p>
-      <span class="cta cta-soon" aria-disabled="true">Coming soon to the Mac App Store</span>
-      <span class="cta-note">Free. Requires macOS 14 or later on an Apple Silicon Mac.</span>
-      <div class="hero-shot">
-        <img src="assets/shots/shot-02.png" alt="CutParty clip settings with per-clip edits and a live video preview" loading="eager" />
+      <span class="eyebrow reveal"><span class="dot"></span> A native Mac app · Coming soon</span>
+      <h1 class="reveal">Cut to the <span class="grad">fun</span> part<br />of <span class="typer" data-words="editing,creating,imagining,publishing,sharing"><span class="typer-text">editing</span><span class="caret" aria-hidden="true"></span></span></h1>
+      <p class="sub reveal">Drop in a folder of clips. CutParty cuts silences, reduces noise, normalizes loudness, color grades, and stitches them into a finished video — one click, entirely on your Mac.</p>
+
+      <div class="cta-row reveal">
+        <button class="cta cta-download" id="download-cta" type="button"
+                aria-label="Download on the Mac App Store — coming soon">
+          <span class="cta-label">Download on the Mac App Store</span>
+          <span class="badge">Coming soon</span>
+        </button>
+      </div>
+      <span class="cta-note reveal">Free. Requires macOS 14 or later on an Apple Silicon Mac.</span>
+
+      <div class="trust reveal">
+        <span>🔒 Runs entirely on your Mac</span>
+        <span>🙅 No account, nothing uploaded</span>
+        <span>💸 No subscription</span>
+        <span>⚡ Built for Apple Silicon</span>
+      </div>
+
+      <div class="hero-shot reveal">
+        <div class="tilt">
+          <img src="assets/shots/shot-02.png" alt="CutParty clip settings with per-clip edits and a live video preview" loading="eager" />
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- How it works -->
+  <section id="how" class="wrap">
+    <div class="section-head">
+      <span class="kicker reveal">Three steps</span>
+      <h2 class="section-title reveal">From raw clips to finished video.</h2>
+      <p class="section-sub reveal">No timeline, no scrubbing, no plugins to install. Everything happens in one window.</p>
+    </div>
+    <div class="steps" data-stagger>
+      <div class="step reveal"><h3>Import</h3><p>Drag in a folder of clips, or click Import. CutParty lines them up for you.</p></div>
+      <div class="step reveal"><h3>Choose your edits</h3><p>Toggle Cut Silences, Reduce Noise, Normalize Audio, and Color Grade — per clip.</p></div>
+      <div class="step reveal"><h3>Export</h3><p>Get one stitched video, or every clip as its own file, at the size you choose.</p></div>
+    </div>
+  </section>
+
+  <!-- Features -->
   <section id="features" class="wrap">
-    <h2 class="section-title">Everything happens in one window.</h2>
-    <p class="section-sub">Toggle the edits you want per clip, then export. No timeline, no fuss.</p>
-    <div class="features">
-      <div class="feature"><div class="emoji">✂️</div><h3>Cut Silences</h3><p>Automatically trims dead air so your video moves.</p></div>
-      <div class="feature"><div class="emoji">🤫</div><h3>Reduce Noise</h3><p>Cleans up background hiss and hum from your audio.</p></div>
-      <div class="feature"><div class="emoji">📺</div><h3>Normalize Audio</h3><p>Evens out loudness to a consistent level (-14 LUFS for YouTube).</p></div>
-      <div class="feature"><div class="emoji">🎨</div><h3>Color Grade</h3><p>A tasteful grade that makes footage look finished.</p></div>
-      <div class="feature"><div class="emoji">❤️‍🩹</div><h3>Stitch or Batch</h3><p>Export one stitched video, or every clip as its own file.</p></div>
-      <div class="feature"><div class="emoji">🏆</div><h3>Track Your Impact</h3><p>See cuts made, silence removed, and time saved over your lifetime.</p></div>
+    <div class="section-head">
+      <span class="kicker reveal">What it does</span>
+      <h2 class="section-title reveal">Everything happens in one window.</h2>
+      <p class="section-sub reveal">Toggle the edits you want, then export. The polish that used to take an afternoon, in a click.</p>
+    </div>
+    <div class="features" data-stagger>
+      <div class="feature reveal" style="--fc:var(--c-blue)"><div class="emoji">✂️</div><h3>Cut Silences</h3><p>Automatically trims dead air so your video always moves.</p></div>
+      <div class="feature reveal" style="--fc:var(--c-teal)"><div class="emoji">🤫</div><h3>Reduce Noise</h3><p>Cleans up background hiss and hum from your audio.</p></div>
+      <div class="feature reveal" style="--fc:var(--c-green)"><div class="emoji">📺</div><h3>Normalize Audio</h3><p>Evens out loudness to a consistent level (-14 LUFS for YouTube).</p></div>
+      <div class="feature reveal" style="--fc:var(--c-gold)"><div class="emoji">🎨</div><h3>Color Grade</h3><p>A tasteful grade that makes ordinary footage look finished.</p></div>
+      <div class="feature reveal" style="--fc:var(--c-pink)"><div class="emoji">❤️‍🩹</div><h3>Stitch or Batch</h3><p>Export one stitched video, or every clip as its own file.</p></div>
+      <div class="feature reveal" style="--fc:var(--c-purple)"><div class="emoji">🏆</div><h3>Track Your Impact</h3><p>See cuts made, silence removed, and time saved over your lifetime.</p></div>
     </div>
   </section>
 
+  <!-- Gallery -->
   <section class="wrap">
-    <h2 class="section-title">See it in action.</h2>
-    <div class="gallery">
-      <img src="assets/shots/shot-01.png" alt="CutParty welcome screen" loading="lazy" />
-      <img src="assets/shots/shot-03.png" alt="Stitch or export clips individually" loading="lazy" />
-      <img src="assets/shots/shot-06.png" alt="Lifetime editing stats" loading="lazy" />
-      <img src="assets/shots/shot-02.png" alt="Per-clip edit settings" loading="lazy" />
+    <div class="section-head">
+      <span class="kicker reveal">A look inside</span>
+      <h2 class="section-title reveal">See it in action.</h2>
+    </div>
+    <div class="gallery" data-stagger>
+      <div class="shot reveal"><img src="assets/shots/shot-01.png" alt="CutParty welcome screen" loading="lazy" /></div>
+      <div class="shot reveal"><img src="assets/shots/shot-03.png" alt="Stitch or export clips individually" loading="lazy" /></div>
+      <div class="shot reveal"><img src="assets/shots/shot-06.png" alt="Lifetime editing stats" loading="lazy" /></div>
+      <div class="shot reveal"><img src="assets/shots/shot-02.png" alt="Per-clip edit settings" loading="lazy" /></div>
     </div>
   </section>
 
+  <!-- No subscription callout -->
   <section class="wrap">
-    <div class="callout">
-      <h2>No subscription.</h2>
-      <p>CutParty is not another monthly bill. The full app and every core feature are yours to use. Exports can include an optional CutParty watermark: keep it on to support the app, or turn it off anytime.</p>
+    <div class="callout reveal">
+      <h2>No subscription. No account. No catch.</h2>
+      <p>CutParty is not another monthly bill, and it never asks you to sign in. The full app and every core feature are yours to use. Exports can include an optional CutParty watermark — keep it on to support the app, or turn it off anytime.</p>
     </div>
   </section>
 
@@ -87,5 +126,199 @@
       </div>
     </div>
   </footer>
+
+  <script src="assets/vendor/canvas-confetti.min.js"></script>
+  <script>
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---- Confetti that drifts as you scroll ---- */
+    var layer = document.querySelector('.confetti');
+    var COLORS = ['#2783de', '#e0a93b', '#46a171', '#e56458', '#9d6bd6', '#35b9b0', '#e97393'];
+    var pieces = [];
+    var span = window.innerHeight + 260;
+
+    function build() {
+      layer.innerHTML = '';
+      pieces = [];
+      var n = window.innerWidth < 760 ? 14 : 26;
+      for (var i = 0; i < n; i++) {
+        var el = document.createElement('span');
+        el.className = 'cf';
+        var dot = document.createElement('i');
+        var w = 7 + Math.random() * 5;
+        dot.style.width = w + 'px';
+        dot.style.height = (w * 2.4) + 'px';
+        dot.style.background = COLORS[i % COLORS.length];
+        dot.style.opacity = (0.16 + Math.random() * 0.22).toFixed(2);
+        dot.style.animationDuration = (4 + Math.random() * 4).toFixed(1) + 's';
+        dot.style.animationDelay = (-Math.random() * 5).toFixed(1) + 's';
+        el.appendChild(dot);
+        el.style.left = (Math.random() * 100).toFixed(2) + '%';
+        layer.appendChild(el);
+        pieces.push({
+          el: el,
+          base: Math.random() * span,
+          speed: 0.10 + Math.random() * 0.42,  // depth: nearer pieces move faster
+          rot: Math.random() * 360,
+          spin: (Math.random() - 0.5) * 0.30
+        });
+      }
+    }
+
+    var bar = document.querySelector('.progress');
+    var topbar = document.querySelector('.topbar');
+    var ticking = false;
+
+    function frame() {
+      var y = window.pageYOffset;
+
+      for (var i = 0; i < pieces.length; i++) {
+        var p = pieces[i];
+        var ty = (((p.base + y * p.speed) % span) + span) % span - 130;
+        p.el.style.transform = 'translate3d(0,' + ty.toFixed(1) + 'px,0) rotate(' + (p.rot + y * p.spin).toFixed(1) + 'deg)';
+      }
+
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+      topbar.classList.toggle('stuck', y > 8);
+
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(frame); }
+    }
+
+    if (!reduce) {
+      build();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () { span = window.innerHeight + 260; build(); frame(); });
+      frame();
+    } else {
+      topbar.classList.toggle('stuck', window.pageYOffset > 8);
+    }
+
+    /* ---- Headline word cycle (type / backspace) ---- */
+    var typer = document.querySelector('.typer');
+    if (typer && !reduce) {
+      var words = typer.getAttribute('data-words').split(',');
+      var out = typer.querySelector('.typer-text');
+      var wi = 0, ci = words[0].length, deleting = true;
+
+      var tick = function () {
+        var word = words[wi];
+
+        if (deleting) {
+          ci--;
+          out.textContent = word.slice(0, ci);
+          if (ci <= 0) {
+            deleting = false;
+            wi = (wi + 1) % words.length;
+            typer.classList.remove('typing');
+            return setTimeout(tick, 340);
+          }
+          typer.classList.add('typing');
+          return setTimeout(tick, 38);
+        }
+
+        ci++;
+        out.textContent = word.slice(0, ci);
+        if (ci >= word.length) {
+          deleting = true;
+          typer.classList.remove('typing');
+          return setTimeout(tick, 1750);   // hold the finished word
+        }
+        typer.classList.add('typing');
+        return setTimeout(tick, 62 + Math.random() * 50);
+      };
+
+      setTimeout(tick, 1750);
+    }
+
+    /* ---- Reveal on scroll, staggered within a group ---- */
+    var els = document.querySelectorAll('.reveal');
+    document.querySelectorAll('[data-stagger]').forEach(function (group) {
+      group.querySelectorAll('.reveal').forEach(function (el, i) {
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    /* ---- Confetti burst on download click ----
+       Mirrors the app's ConfettiSwiftUI cannon (Views/CelebrationConfetti.swift):
+       132 slim rectangles, full 360° burst, gravity rain, exact DesignTokens colors. */
+    var dl = document.getElementById('download-cta');
+    if (dl && typeof confetti === 'function') {
+      // DesignTokens.Colors (light) used by the app's confettiCannon
+      var APP_COLORS = ['#2783DE', '#46A171', '#D5803B', '#E56458', '#9D6BD6', '#D6BF6B'];
+      // A slim rectangle to match ConfettiSwiftUI's .slimRectangle shape
+      var slim = confetti.shapeFromPath({ path: 'M0 0 L3 0 L3 10 L0 10 Z' });
+
+      var lastFire = 0;
+      var fire = function () {
+        var now = Date.now();
+        if (now - lastFire < 400) return;   // small throttle, echoes the app's budget cap
+        lastFire = now;
+
+        var r = dl.getBoundingClientRect();
+        var origin = {
+          x: (r.left + r.width / 2) / window.innerWidth,
+          y: (r.top + r.height / 2) / window.innerHeight
+        };
+        confetti({
+          particleCount: 132,        // app: num: 132
+          spread: 360,               // app: openingAngle 0° → closingAngle 360° (full circle)
+          startVelocity: 45,
+          gravity: 1,                // rains down
+          ticks: 260,
+          scalar: 1.15,              // app: confettiSize 14
+          colors: APP_COLORS,
+          shapes: [slim],
+          origin: origin,
+          disableForReducedMotion: true
+        });
+      };
+
+      dl.addEventListener('click', fire);
+    }
+
+    /* ---- Cursor spotlight on feature cards ---- */
+    document.querySelectorAll('.feature').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    /* ---- Hero screenshot tilt ---- */
+    var shot = document.querySelector('.hero-shot');
+    var tilt = shot && shot.querySelector('.tilt');
+    if (tilt && !reduce && window.matchMedia('(hover: hover)').matches) {
+      shot.addEventListener('pointermove', function (e) {
+        var r = shot.getBoundingClientRect();
+        var dx = (e.clientX - r.left) / r.width - 0.5;
+        var dy = (e.clientY - r.top) / r.height - 0.5;
+        tilt.style.transition = 'transform .12s linear';
+        tilt.style.transform = 'rotateY(' + (dx * 5).toFixed(2) + 'deg) rotateX(' + (-dy * 4).toFixed(2) + 'deg) translateZ(0)';
+      });
+      shot.addEventListener('pointerleave', function () {
+        tilt.style.transition = 'transform .5s cubic-bezier(.22,.61,.36,1)';
+        tilt.style.transform = '';
+      });
+    }
+  })();
+  </script>
 </body>
 </html>
