@@ -160,6 +160,7 @@ a:hover { text-decoration: underline; }
 /* Black download button carrying a coming-soon badge; clicking fires confetti */
 .cta-download { border: 0; cursor: pointer; font-family: inherit; }
 .cta-download:active { transform: translateY(0) scale(.98); }
+.cta-apple { flex: none; margin-top: -2px; }
 .cta-download .badge {
   font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
   color: #4a3300; background: #ffd21e; padding: 4px 9px; border-radius: 999px;
