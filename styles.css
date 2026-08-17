@@ -125,7 +125,9 @@ a:hover { text-decoration: underline; }
   font-size: clamp(42px, 6.6vw, 78px); font-weight: 800;
   letter-spacing: -0.03em; line-height: 1.02; margin-top: 24px;
 }
-.hero h1 .grad {
+.hero h1 .grad,
+.callout h2 .grad {
+  font-style: italic;
   background: linear-gradient(100deg, #ff2d7e 0%, #f5a01a 28%, #b62ff0 60%, #1a86ff 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
