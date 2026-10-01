@@ -1,0 +1,8 @@
+# GitHub Pages runs Jekyll on this repo. The site is plain HTML; this file only keeps the
+# YapParty submodule's own docs and tooling files off cutparty.com.
+exclude:
+  - yapparty/AGENTS.md
+  - yapparty/CLAUDE.md
+  - yapparty/README.md
+  - yapparty/lefthook.yml
+  - yapparty/docs/

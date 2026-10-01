@@ -1,0 +1,3 @@
+[submodule "yapparty"]
+	path = yapparty
+	url = https://github.com/nomaditsu/yapparty-site.git

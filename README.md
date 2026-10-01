@@ -9,6 +9,9 @@ Marketing site for **CutParty** (macOS app). Static HTML/CSS, served by GitHub P
 - `styles.css` — shared styles (Poppins, minimalist, confetti accent)
 - `assets/shots/` — App Store screenshots, resized for web
 - `CNAME` — custom domain for GitHub Pages
+- `yapparty/` — the YapParty site (cutparty.com/yapparty), a git submodule of
+  `nomaditsu/yapparty-site`. Edit it there, not here.
+- `_config.yml` — keeps the YapParty repo's docs off the published site
 
 ## Local preview
 Open `index.html` in a browser, or run `python3 -m http.server` in this folder.
@@ -16,6 +19,17 @@ Open `index.html` in a browser, or run `python3 -m http.server` in this folder.
 ## Deploy
 Pushing to the default branch publishes via GitHub Pages. DNS for `cutparty.com`
 points at GitHub Pages (apex A records + `www` CNAME).
+
+## Updating YapParty (cutparty.com/yapparty)
+YapParty's source is `nomaditsu/yapparty-site`. After a change merges there, bump the pointer here:
+
+```bash
+git submodule update --init --remote yapparty
+git commit -am "Update YapParty site"
+```
+
+GitHub Pages checks out the public submodule when it builds. Clone this repo with
+`--recurse-submodules` (or run `git submodule update --init`) to preview it locally.
 
 ## Notes
 - The App Store button links to the CutParty listing (live once the app is approved).
